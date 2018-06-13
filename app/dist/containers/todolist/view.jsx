@@ -1,6 +1,7 @@
 //@flow
 import React from 'react';
-import { withStyle } from '~/core/container';
+import { compose, withStyle } from '~/core/container';
+import { withHandlers, withState, shouldUpdate } from 'recompose';
 import styles from './todolist.scss';
 
 /* components */
@@ -9,10 +10,18 @@ import Add from './additem';
 import ToDoList from './todolist';
 import Left from './left';
 
-export default withStyle(styles)(_ => (
+export default compose(
+  withState('filter', 'setFilter', 'all'),
+  withHandlers({
+    filterHandler: ({ setFilter }) => filter => () => {
+      setFilter(filter);
+    }
+  }),
+  withStyle(styles)
+)(({ filter, filterHandler }) => (
   <div>
     {/* bar */}
-    <Bar />
+    <Bar filter={filter} filterHandler={filterHandler} />
     {/* to do */}
     <div styleName="content">
       <div styleName="todo-body">
@@ -22,7 +31,7 @@ export default withStyle(styles)(_ => (
         </div>
         {/* todo item */}
         <div styleName="todo-list">
-          <ToDoList />
+          <ToDoList filter={filter} />
         </div>
         <div styleName="todo-left">
           <Left />
