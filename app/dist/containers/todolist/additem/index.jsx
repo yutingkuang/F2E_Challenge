@@ -58,7 +58,7 @@ export default handler(
               <div styleName="input-box">
                 <input
                   type="datetime"
-                  value={due}
+                  value={due || ''}
                   name="due"
                   onChange={changeInput}
                   placeholder="yyyy/mm/dd hh:mm"
@@ -77,7 +77,7 @@ export default handler(
                   <input
                     styleName="attached"
                     type="file"
-                    value={attached}
+                    value={attached || ''}
                     name="attached"
                     onChange={changeInput}
                   />
@@ -99,7 +99,7 @@ export default handler(
                   rows="4"
                   placeholder="Type your memo here…"
                   onChange={changeInput}
-                  value={comment}
+                  value={comment || ''}
                   name="comment"
                 />
               </div>
