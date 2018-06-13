@@ -27,10 +27,10 @@ export default withStyle(styles)(
           <i styleName={`fa ${!isNil(due) ? 'fa fa-calendar' : 'hidden'}`} />{' '}
           {new Date(due).toLocaleDateString()}
         </div>
-        <div styleName="meta-pieces">
+        <div styleName={`meta-pieces ${isNil(attached) ? 'hidden' : ''}`}>
           <i styleName={`fa ${!isNil(attached) ? 'fa-file-o' : 'hidden'}`} />
         </div>
-        <div styleName="meta-pieces">
+        <div styleName={`meta-pieces ${isNil(comment) ? 'hidden' : ''}`}>
           <i
             styleName={`fa ${!isNil(comment) ? 'fa-commenting-o' : 'hidden'}`}
           />

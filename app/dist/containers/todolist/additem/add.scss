@@ -137,10 +137,16 @@ input[type='file'].attached {
   color: #d0021b;
   background: #ffffff;
   border-radius: 0 0 0 5px;
+  &:hover {
+    background: #fdfdfd;
+  }
 }
 
 .btn-add {
   background: #4a90e2;
   color: #ffffff;
   border-radius: 0 0 5px 0;
+  &:hover {
+    background: #3982d7;
+  }
 }
