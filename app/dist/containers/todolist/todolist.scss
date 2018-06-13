@@ -1,10 +1,6 @@
 .content {
+  padding: 22px 0 70px 0;
   background: #e1e1e1;
-  height: 100%;
-  position: absolute;
-  top: 76px;
-  left: 0px;
-  right: 0px;
   font-size: 24px;
 }
 
@@ -14,9 +10,14 @@
 }
 
 .add-item {
-  margin: 24px 0px;
+  margin-bottom: 24px;
 }
 
 .todo-list {
   margin-bottom: 8px;
+}
+
+.todo-left {
+  color: #c8c8c8;
+  font-style: italic;
 }
