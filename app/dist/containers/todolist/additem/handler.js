@@ -40,6 +40,16 @@ export default compose(
       }),
       changeInput: ({ todo: preTodo }) => ({ target: { value, name } }) => ({
         todo: { ...preTodo, [name]: value }
+      }),
+      resetTodo: _ => _ => ({
+        todo: {
+          todo: '',
+          isDone: false,
+          isImportant: false,
+          attached: null,
+          due: null,
+          comment: null
+        }
       })
     }
   ),
@@ -48,8 +58,9 @@ export default compose(
     setImportant: ({ setImportant, todo: { isImportant } }) => _ =>
       setImportant(!isImportant),
     setDone: ({ setDone, todo: { isDone } }) => _ => setDone(!isDone),
-    addTodo: ({ todo, dispatch, setOpen }) => _ => {
+    addTodo: ({ todo, dispatch, setOpen, resetTodo }) => _ => {
       dispatch(emit(ADD_TODO, todo));
+      resetTodo();
       setOpen(false);
     }
   }),
