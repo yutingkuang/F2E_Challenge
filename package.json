@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
-	"homepage": "https://yutingkuang.github.io/F2E_Challenge",
+	"homepage": "https://yutingkuang.github.io/F2E_Challenge/",
 	"scripts": {
 		"development": "npm run build; NODE_ENV=development webpack --config ./webpack.dev.config.js",
 		"production": "npm run build; NODE_ENV=production webpack -p --config ./webpack.prod.config.js",
