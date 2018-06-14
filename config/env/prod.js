@@ -1,12 +1,12 @@
 /* 專案名稱 */
-const PROJECT_NAME = 'React Redux Start Kit';
+const PROJECT_NAME = 'The F2E Challenge';
 
 /* 專案環境 */
 const PROJECT_HOST = '0.0.0.0';
 const PROJECT_PORT = 80;
 
 /* 路由根目錄 */
-const ROUTE_BASE = '/';
+const ROUTE_BASE = '/F2E?/';
 
 /* 要引入的共用資源，withStyle 預設樣式 */
 const INCLUDE_ASSETS = 'css';

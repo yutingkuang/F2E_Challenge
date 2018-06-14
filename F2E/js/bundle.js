@@ -988,7 +988,7 @@
       PROJECT_NAME: 'React Redux Start Kit',
       PROJECT_HOST: '0.0.0.0',
       PROJECT_PORT: 80,
-      ROUTE_BASE: '/',
+      ROUTE_BASE: '/F2E?/',
       INCLUDE_ASSETS: 'css',
       BUILD_DIRECTORIES: 'containers',
       ENABLE_DEV_TOOLS: !1
