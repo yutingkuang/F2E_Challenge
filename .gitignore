@@ -1,3 +1,4 @@
+output/development/
 node_modules/
 flow-typed/npm/
 .idea/
