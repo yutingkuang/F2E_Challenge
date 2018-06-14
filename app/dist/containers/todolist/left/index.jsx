@@ -7,7 +7,10 @@ import { countBy } from 'ramda';
 
 export default compose(
   withStore(STORE_KEY),
-  mapProps(({ storeData: todos }) => ({
-    left: countBy(({ isDone }) => isDone)(todos).false
+  mapProps(({ storeData: todos, filter }) => ({
+    left:
+      filter === 'done'
+        ? `${countBy(({ isDone }) => isDone)(todos).true} tasks completed`
+        : `${countBy(({ isDone }) => isDone)(todos).false} tasks left`
   }))
-)(({ left }) => <div>{`${left} tasks left`}</div>);
+)(({ left }) => <div>{left}</div>);

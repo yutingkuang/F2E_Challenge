@@ -34,7 +34,7 @@ export default compose(
           <ToDoList filter={filter} />
         </div>
         <div styleName="todo-left">
-          <Left />
+          <Left filter={filter} />
         </div>
       </div>
     </div>
