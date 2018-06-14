@@ -5,7 +5,7 @@ import Master from '../master';
 
 export default {
   router: {
-    path: '/Unkonw',
+    path: '/Filter',
     component: () => (
       <Master>
         <View />

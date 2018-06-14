@@ -40,7 +40,7 @@ export default compose(
   withProps({
     menu: [
       { name: 'To Do List', route: '/ToDoList' },
-      { name: 'Unknow', route: '/Unkonw' }
+      { name: 'Filter', route: '/Filter' }
     ]
   }),
   withState('active', 'setActive', 0),
