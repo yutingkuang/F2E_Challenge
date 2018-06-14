@@ -1,7 +1,7 @@
 /* @flow */
 import { reducerCreator, assign } from '~/core/reducer';
 /* helper */
-import { append, update } from 'ramda';
+import { append, update, last, findIndex, propEq } from 'ramda';
 
 /* action type */
 export const ADD_TODO = 'ADD_TODO';
@@ -9,6 +9,7 @@ export const EDIT_TODO = 'EDIT_TODO';
 
 /* type */
 type ToDo = {
+  index: number,
   todo: string,
   isDone: boolean,
   isImportant: boolean,
@@ -24,6 +25,7 @@ export const STORE_KEY = 'store-to-do-list';
 // 預設給5個範例
 export const defaultState: State = [
   {
+    index: 0,
     todo: 'Type Something Here…',
     isDone: false,
     isImportant: true,
@@ -32,6 +34,7 @@ export const defaultState: State = [
     comment: null
   },
   {
+    index: 1,
     todo: 'Type Something Here…',
     isDone: false,
     isImportant: true,
@@ -40,6 +43,7 @@ export const defaultState: State = [
     comment: null
   },
   {
+    index: 2,
     todo: 'Type Something Here…',
     isDone: false,
     isImportant: false,
@@ -48,6 +52,7 @@ export const defaultState: State = [
     comment: null
   },
   {
+    index: 3,
     todo: 'Type Something Here…',
     isDone: false,
     isImportant: false,
@@ -56,6 +61,7 @@ export const defaultState: State = [
     comment: null
   },
   {
+    index: 4,
     todo: 'Type Something Here…',
     isDone: true,
     isImportant: false,
@@ -66,8 +72,12 @@ export const defaultState: State = [
 ];
 
 export const reducer = reducerCreator(defaultState, {
-  [ADD_TODO]: (preState, todo: ToDo) => append(todo, preState),
-  [EDIT_TODO]: (preState, { todo, index }) => update(index, todo, preState)
+  [ADD_TODO]: (preState, todo: ToDo) => {
+    const index = preState.length > 0 ? last(preState).index + 1 : 0;
+    return append({ ...todo, index }, preState);
+  },
+  [EDIT_TODO]: (preState, todo: ToDo) =>
+    update(findIndex(propEq('index', todo.index))(preState), todo, preState)
 });
 
 export default {
