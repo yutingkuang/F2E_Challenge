@@ -1,0 +1,60 @@
+@import './app/assets/css/responsive.scss';
+@media #{$res-xs} {
+  .res-visible-xs,
+  .res-hidden-sm,
+  .res-hidden-md,
+  .res-hidden-lg {
+    display: block;
+  }
+  .res-hidden-xs,
+  .res-visible-sm,
+  .res-visible-md,
+  .res-visible-lg {
+    display: none;
+  }
+}
+
+@media #{$res-sm} {
+  .res-visible-xs,
+  .res-hidden-sm,
+  .res-visible-md,
+  .res-visible-lg {
+    display: none;
+  }
+  .res-hidden-xs,
+  .res-visible-sm,
+  .res-hidden-md,
+  .res-hidden-lg {
+    display: block;
+  }
+}
+
+@media #{$res-md} {
+  .res-visible-xs,
+  .res-visible-sm,
+  .res-hidden-md,
+  .res-visible-lg {
+    display: none;
+  }
+  .res-hidden-xs,
+  .res-hidden-sm,
+  .res-visible-md,
+  .res-hidden-lg {
+    display: block;
+  }
+}
+
+@media #{$res-lg} {
+  .res-visible-xs,
+  .res-visible-sm,
+  .res-visible-md,
+  .res-hidden-lg {
+    display: none;
+  }
+  .res-hidden-xs,
+  .res-hidden-sm,
+  .res-hidden-md,
+  .res-visible-lg {
+    display: block;
+  }
+}

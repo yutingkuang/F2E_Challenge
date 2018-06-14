@@ -1,0 +1,7 @@
+$width-sm: 640px;
+$width-md: 1440px;
+$width-lg: 1920px;
+$res-xs: '(max-width: #{$width-sm - 1})';
+$res-sm: '(min-width: #{$width-sm}) and (max-width: #{$width-md - 1})';
+$res-md: '(min-width: #{$width-md}) and (max-width: #{$width-lg - 1})';
+$res-lg: '(min-width: #{$width-lg})';

@@ -1,0 +1,63 @@
+.toggle-menu-btn {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  background: rgb(0, 100, 100);
+  font-size: 26px;
+  font-weight: bolder;
+  color: white;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.3s ease;
+  &.open {
+    left: 200px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menu {
+  transition: all 0.3s ease;
+  position: fixed;
+  width: 0%;
+  top: 0;
+  left: -200px;
+  background: rgb(0, 0, 0);
+  height: 100%;
+  z-index: 999;
+  box-shadow: 0px 0px 10px black;
+  &.open {
+    left: 0;
+    width: 200px;
+    display: block;
+  }
+}
+
+.menu-item {
+  display: block;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+  color: #eee;
+  text-decoration: none;
+  &:hover {
+    background: rgb(50, 50, 50);
+    color: #fff;
+    text-decoration: none;
+  }
+  &.active {
+    background: rgb(50, 50, 50);
+    font-weight: 900;
+  }
+}
