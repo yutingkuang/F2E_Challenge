@@ -985,10 +985,10 @@
   },
   339: function(e, a) {
     e.exports = {
-      PROJECT_NAME: 'React Redux Start Kit',
+      PROJECT_NAME: 'The F2E Challenge',
       PROJECT_HOST: '0.0.0.0',
       PROJECT_PORT: 80,
-      ROUTE_BASE: '/F2E?/',
+      ROUTE_BASE: '/F2E/index.html?/',
       INCLUDE_ASSETS: 'css',
       BUILD_DIRECTORIES: 'containers',
       ENABLE_DEV_TOOLS: !1
