@@ -19,7 +19,7 @@ export default compose(
   }),
   withStyle(styles)
 )(({ filter, filterHandler }) => (
-  <div>
+  <div styleName="container">
     {/* bar */}
     <Bar filter={filter} filterHandler={filterHandler} />
     {/* to do */}
