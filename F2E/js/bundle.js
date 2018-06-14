@@ -988,7 +988,7 @@
       PROJECT_NAME: 'The F2E Challenge',
       PROJECT_HOST: '0.0.0.0',
       PROJECT_PORT: 80,
-      ROUTE_BASE: '/F2E/index.html?/',
+      ROUTE_BASE: '/F2E_Challenge/index.html?/',
       INCLUDE_ASSETS: 'css',
       BUILD_DIRECTORIES: 'containers',
       ENABLE_DEV_TOOLS: !1
