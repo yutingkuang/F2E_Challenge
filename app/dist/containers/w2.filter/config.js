@@ -2,6 +2,7 @@
 import React from 'react';
 import View from './view';
 import Master from '../master';
+import Reducer from './fetchApi/reducer';
 
 export default {
   router: {
@@ -11,5 +12,6 @@ export default {
         <View />
       </Master>
     )
-  }
+  },
+  reducer: Reducer
 };

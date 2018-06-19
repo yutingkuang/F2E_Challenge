@@ -3,6 +3,8 @@ import React from 'react';
 import { compose, withStyle } from '~/core/container';
 import styles from './w2.scss';
 
+import Fetch from './fetchApi';
+
 export default withStyle(styles)(_ => (
   <div styleName="filter">
     <div styleName="filter-head">
@@ -63,5 +65,6 @@ export default withStyle(styles)(_ => (
         </div>
       </div>
     </div>
+    <Fetch />
   </div>
 ));
