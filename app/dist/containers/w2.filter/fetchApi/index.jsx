@@ -1,7 +1,7 @@
 import React from 'react';
 import { emit } from '~/core/action/effects';
 import { compose, withDispatch } from '~/core/container';
-import { shouldUpdate, lifecycle } from 'recompose';
+import { lifecycle } from 'recompose';
 import { STORY_SAVE } from './reducer';
 
 const apiKey = '356b40eb293040ea9c942c8363a140d2';
@@ -10,7 +10,6 @@ const url =
 
 export default compose(
   withDispatch,
-  // shouldUpdate(_ => false),
   lifecycle({
     componentDidMount() {
       fetch(url)
@@ -21,7 +20,4 @@ export default compose(
         });
     }
   })
-)(_ => {
-  console.log('render');
-  return <div />;
-});
+)(_ => <div />);

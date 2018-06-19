@@ -78,12 +78,23 @@
 .card {
   box-shadow: 0 4px 4px 0 #c8c8c8;
   color: #000000;
+  margin-bottom: 24px;
   &-img {
     background-color: #9013fe;
+    & img {
+      height: 100%;
+      width: 100%;
+    }
   }
   &-right {
     background: #ffffff;
     padding: 24px 20px;
+  }
+  &-flex {
+    display: flex;
+    &.invisible {
+      display: none;
+    }
   }
 }
 
