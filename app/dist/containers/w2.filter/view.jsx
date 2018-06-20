@@ -15,7 +15,9 @@ export default withStyle(styles)(_ => (
     <div styleName="filter-head">
       <div styleName="site-name">HaveFun</div>
       <div>
-        <div styleName="site-search">search</div>
+        <div styleName="site-search">
+          <i styleName="fa fa-search" /> Explore top stories (No Function)
+        </div>
       </div>
     </div>
     <div styleName="filter-body">
