@@ -9,7 +9,7 @@ import { map, addIndex } from 'ramda';
 import Card from './card';
 
 export default compose(
-  withStore(STORE_KEY),
+  withStore(`${STORE_KEY}.filterStories`),
   withStyle(styles)
 )(({ storeData }) => (
   <div styleName="card-list">

@@ -15,11 +15,11 @@ export default class Story {
   published_date: string;
   material_type_facet: string;
   kicker: string;
-  des_facet = [];
-  org_facet = [];
-  per_facet = [];
-  geo_facet = [];
+  facets: Array<string>;
+  geo_facet: Array<string>;
   multimedia: Array<Media>;
+  media: Media;
+  group: -1 | 0 | 1 | 2;
 
   constructor() {
     this.section = '';
@@ -36,10 +36,10 @@ export default class Story {
     this.published_date = '';
     this.material_type_facet = '';
     this.kicker = '';
-    this.des_facet = [];
-    this.org_facet = [];
-    this.per_facet = [];
+    this.facets = [];
     this.geo_facet = [];
     this.multimedia = [];
+    this.media = new Media();
+    this.group = 0;
   }
 }

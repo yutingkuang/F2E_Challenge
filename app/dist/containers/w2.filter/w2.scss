@@ -30,6 +30,26 @@
 
 .filter-form {
   background: #ebebeb;
+  padding: 24px 40px;
+}
+
+.form {
+  &-title {
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  &-input {
+    display: flex;
+    align-items: center;
+  }
+  &-checkbox {
+    background: #ffffff;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    line-height: 16px;
+  }
 }
 
 .filter-content {
@@ -89,6 +109,7 @@
   &-right {
     background: #ffffff;
     padding: 24px 20px;
+    width: 100%;
   }
   &-flex {
     display: flex;
@@ -174,6 +195,7 @@
   }
   .filter-form {
     flex: 0 0 300px;
+    height: fit-content;
     margin-left: 0px;
   }
   .card {
@@ -200,6 +222,7 @@
   }
   .filter-form {
     flex: 0 0 300px;
+    height: fit-content;
     margin-left: 38px;
   }
   .card {

@@ -10,7 +10,7 @@ export default class Media {
   copyright = '';
 
   constructor() {
-    this.url = '';
+    this.url = './no-image.png';
     this.format = '';
     this.height = 0;
     this.width = 0;

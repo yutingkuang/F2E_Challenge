@@ -6,6 +6,10 @@ import styles from './w2.scss';
 // components
 import Fetch from './fetchApi';
 import CardList from './cards';
+import FilterForm from './filter-form';
+import Count from './count';
+import Tag from './tag';
+
 export default withStyle(styles)(_ => (
   <div styleName="filter">
     <div styleName="filter-head">
@@ -15,21 +19,12 @@ export default withStyle(styles)(_ => (
       </div>
     </div>
     <div styleName="filter-body">
-      <div styleName="filter-form">Form</div>
+      <FilterForm />
       <div styleName="filter-content">
         <div styleName="show-txt">
-          Showing <span>15</span> results by…
+          Showing <Count /> results by…
         </div>
-        <div styleName="tags">
-          <div styleName="tag mr-3">
-            Koahsiung
-            <span styleName="tag-x">X</span>
-          </div>
-          <div styleName="tag mr-3">
-            Entertainment
-            <span styleName="tag-x">X</span>
-          </div>
-        </div>
+        <Tag />
         <CardList />
       </div>
     </div>
