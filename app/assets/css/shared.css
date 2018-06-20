@@ -9,3 +9,7 @@ pre[class*='prettyprint'] {
   line-height: 20px;
   font-weight: 100;
 }
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 0.25rem;
+}
+
+.page-item {
+  background: #ffffff;
+  border: 1px solid #eceeef;
+  width: 42px;
+  height: 42px;
+  line-height: 40px;
+  color: #9013fe;
+  text-align: center;
+  &:hover {
+    background: #dedede;
+    cursor: pointer;
+  }
+  &.active {
+    background: #9013fe;
+    border: 1px solid #9013fe;
+    color: #ffffff;
+  }
+  &.disabled {
+    background: #eaeaea;
+    color: #c7c7c7;
+    border: 1px solid #f3f4f5;
+    cursor: default;
+  }
+}
