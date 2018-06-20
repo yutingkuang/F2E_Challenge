@@ -6,6 +6,7 @@ import styles from '../w2.scss';
 
 import { map, addIndex } from 'ramda';
 
+import Paging from '~/components/Paging';
 import Card from './card';
 
 export default compose(
@@ -13,9 +14,11 @@ export default compose(
   withStyle(styles)
 )(({ storeData }) => (
   <div styleName="card-list">
-    {addIndex(map)(
-      (card, idx) => <Card key={`card-${idx}`} card={card} />,
-      storeData
-    )}
+    <Paging>
+      {addIndex(map)(
+        (card, idx) => <Card key={`card-${idx}`} card={card} />,
+        storeData
+      )}
+    </Paging>
   </div>
 ));
